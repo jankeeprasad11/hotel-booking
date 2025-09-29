@@ -18,7 +18,12 @@ const clerkWebhooks = async (req, res)=>{
         //Getting Data from Headers
         const {data, type} = req.body
 
-        
+        const userData = {
+            _id: data.id,
+            email: data.email_addresses[0].email_addresses,
+            username: data.first_name + " " + data.last_name,
+            image: data.image_url,
+        }
 
         // Switch cases for different Events
         switch (type) {
