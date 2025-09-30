@@ -46,8 +46,8 @@ const MyBooking = () => {
         
                     {/* Hotel Details */}
                     <div className='flex flex-col md:flex-row'>
-                        <img src={booking.room.images[0]} alt="hotel-img" className='min-md:w-44 rounded shadow object-cover' />
-                        <div className='flex flex-col gap-1.5 max-md:mt-3 min-md:ml-4'>
+                        <img src={booking.room.images[0]} alt="hotel-img" className='md:w-44 rounded shadow object-cover' />
+                        <div className='flex flex-col gap-1.5 max-md:mt-3 md:ml-4'>
                             <p className='font-playfair text-2xl'>{booking.hotel.name}
                             <span className='font-inter text-sm'> ({booking.room.roomType})</span></p>
                             <div className='flex items-center gap-1 text-sm text-gray-500'>
@@ -87,7 +87,7 @@ const MyBooking = () => {
                             </p>
                         </div>
                         {!booking.isPaid && (
-                            <button className='px-4 py-1.5 mt-4 text-xs border border-gray-400 rounded-full hover:bg-gray-50 transition-all cursor-pointer'>
+                            <button className='px-4 py-1.5 mt-2 text-xs border border-gray-400 rounded-full hover:bg-gray-50 transition-all cursor-pointer'>
                                 Pay Now
                             </button>
                         )}

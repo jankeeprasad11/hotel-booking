@@ -102,7 +102,7 @@ const RoomDetails = () => {
             <div className="grid grid-cols-2 gap-4 lg:w-1/2 w-full">
                 {room?.images.length > 1 && room.images.map((image, index) => (
                     <img onClick={()=> setMainImage(image)} key={index} src={image} alt="Room Image"
-                        className={`w-full rounded-xl shadow-md object-cover cursor-pointer ${mainImage === image && 'outline-3 outline-orange-500'}`}/>
+                        className={`w-full rounded-xl shadow-md object-cover cursor-pointer ${mainImage === image && 'outline outline-3 outline-orange-500'}`}/>
                  ))}
             </div>
         </div>
@@ -148,13 +148,13 @@ const RoomDetails = () => {
                         className="max-w-20 rounded border border-gray-300 px-3 py-2 mt-1.5 outline-none" required/>
                 </div>
             </div>
-            <button type="submit" className="bg-primary hover:bg-primary-dull active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-25 py-3 md:py-4 text-base cursor-pointer">
+            <button type="submit" className="bg-primary hover:bg-primary-dull active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-24 py-3 md:py-4 text-base cursor-pointer">
                 {isAvailable ? "Book Now" : "Check Availability"}
             </button>
         </form>
 
         {/* Common Specification */}
-        <div className="mt-25 space-y-4">
+        <div className="mt-24 space-y-4">
           {roomCommonData.map((spec, index)=> (
             <div key={index} className="flex items-start gap-2">
               <img src={spec.icon} alt={`${spec.title}-icon`} className="w-6.5" />
@@ -174,9 +174,9 @@ const RoomDetails = () => {
         </div>
 
         {/* Hosted  By */}
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 mt-16">
           <div className="flex gap-4">
-            <img src={room.hotel.owner.image} alt="Host" className="h-14 w-14 md:h-18 md:w-18 rounded-full" />
+            <img src={room.hotel.owner.image} alt="Host" className="h-16 w-16 md:h-18 md:w-18 rounded-full" />
             <div>
               <p className="text-lg md:text-xl">Hosted by {room.hotel.name}</p>
               <div className="flex items-center mt-1">
