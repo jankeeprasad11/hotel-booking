@@ -6,7 +6,7 @@ import { useAppContext } from '../context/AppContext'
 
 const RecommendedHotels = () => {
 
-  const {rooms, searchedCities} =useAppContext();
+  const {rooms, searchedCities, currency} =useAppContext();
   const [recommended, setRecommended] = useState([])
 
   const filterHotels = ()=>{
