@@ -1,1 +1,9 @@
+npm install
 npm install nodemailer
+
+# mongodb atlas
+# clerk dashboard
+# cloudinary.com
+# nodemailer.com
+# app.brevo.com
+# vercel.com
