@@ -150,7 +150,7 @@ const AllRooms = () => {
                         ))}
                     </div>
                     {/* Room Price per Night */}
-                    <p className='text-xl font-medium text-gray-700'>${room.pricePerNight} /night</p>
+                    <p className='text-xl font-medium text-gray-700'>{currency}{room.pricePerNight} /night</p>
                 </div>
             </div>
         ))}
@@ -179,7 +179,7 @@ const AllRooms = () => {
             <div className='px-5 pt-5'>
                 <p className='font-medium text-gray-800'>Price Range</p>
                 {priceRanges.map((range, index)=>(
-                    <CheckBox key={index} label={`$${currency} ${range}`} selected={selectedFilters.priceRange.includes(range)}
+                    <CheckBox key={index} label={`${currency} ${range}`} selected={selectedFilters.priceRange.includes(range)}
                     onChange={(checked)=> handleFilterChange(checked, range, 'priceRange')}/>
                 ))}
             </div>
