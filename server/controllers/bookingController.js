@@ -93,12 +93,19 @@ export const createBooking = async (req, res)=>{
             `
         }
         
-        await transporter.sendMail(mailOptions)
+        try {
+            await transporter.sendMail(mailOptions)
+        } catch (error) {
+            res.json({success: false, message: 'Failed to send Mail'})
+        }finally{
 
-        res.json({success: true, message: "Booking created successfully"})
+            res.json({success: true, message: "Booking created successfully"})
+        }
+        // await transporter.sendMail(mailOptions)
+
 
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         res.json({success: false, message: "Failed to create booking"})
     }
 }
