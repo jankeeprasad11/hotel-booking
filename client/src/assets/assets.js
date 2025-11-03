@@ -38,6 +38,7 @@ import listIcon from "./listIcon.svg";
 import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
+import hotel_bg from "./hotel_bg.webp";
 
 
 export const assets = {
@@ -74,13 +75,30 @@ export const assets = {
     uploadArea,
     totalBookingIcon,
     totalRevenueIcon,
+    hotel_bg,
 }
 
 export const cities = [
-    "Dubai",
-    "Singapore",
-    "New York",
-    "London",
+    "Mumbai",
+"Delhi",
+"Bengaluru",
+"Hyderabad",
+"Chennai",
+"Kolkata",
+"Pune",
+"Ahmedabad",
+"Surat",
+"Jaipur",
+"Lucknow",
+"Kanpur",
+"Nagpur",
+"Indore",
+"Bhopal",
+"Coimbatore",
+"Visakhapatnam",
+"Chandigarh",
+"Vadodara",
+"Patna",
 ];
 
 // Exclusive Offers Dummy Data
